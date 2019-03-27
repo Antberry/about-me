@@ -1,6 +1,7 @@
 #container {
   background-color: bisque;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-left: 10px;
 }
 #pageHead {
   font-size: 2em;
@@ -16,4 +17,12 @@ h2 {
 p {
   color: darkorchid;
 }
-
+#quiz{
+  width: 400px;
+  height: 400px;
+  box-shadow: 10px 10px 10px grey;
+  border: 1px, solid, black;
+  background-color: darkslategray;
+  padding-left: 10px;
+  color: whitesmoke;
+}
