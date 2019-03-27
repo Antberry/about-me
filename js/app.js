@@ -61,12 +61,14 @@
       if(livedStates.includes(String(guessState).toLowerCase()) === true){
         isGuessRight = true;
         alert(youRight)
+        alert('The correct answers are' + livedStates);
         correct++;
       } else if(guessState === ''){
-        alert("Please enter a state.");
+          alert("Please enter a state.");
       }
       userGuesses++;
     }
+    alert('The correct answers are ' + livedStates);
     wrong++;
   
       //display in the console how many I got right
