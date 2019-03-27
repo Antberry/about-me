@@ -60,8 +60,7 @@
       guessState = prompt('Can you guess a state that I have lived in besides Washington?');
       if(livedStates.includes(String(guessState).toLowerCase()) === true){
         isGuessRight = true;
-        alert(youRight)
-        alert('The correct answers are' + livedStates);
+        alert(youRight);
         correct++;
       } else if(guessState === ''){
           alert("Please enter a state.");

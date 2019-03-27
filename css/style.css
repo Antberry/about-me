@@ -2,6 +2,7 @@
   background-color: bisque;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding-left: 10px;
+  
 }
 #pageHead {
   font-size: 2em;
@@ -25,8 +26,10 @@ h2 {
   background-color: darkslategray;
   padding-left: 10px;
   color: whitesmoke;
+  margin-bottom: 10px;
 }
 
 footer{
-  margin-top: 20px;
+  text-align: center;
+
 }
