@@ -74,7 +74,7 @@
     console.log('You got ' + wrong + ' wrong.');
     
     //this calculate the score
-    var score = correct * (100/7);
+    var score = Math.round(correct * (100/7));
     console.log('Your score is ' + score + '!');
    
     //If the score above 60 pass below is fail
