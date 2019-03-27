@@ -1,0 +1,19 @@
+#container {
+  background-color: bisque;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#pageHead {
+  font-size: 2em;
+  text-align: center;
+  color: crimson;
+}
+h1 {
+  color: darkblue;
+}
+h2 {
+  color: black;
+}
+p {
+  color: darkorchid;
+}
+
