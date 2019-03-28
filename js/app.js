@@ -19,7 +19,7 @@ var i = 0;
 while(i < userQuestion.length) {
   var userRawAnswer = prompt(userQuestion[i]);
   var userAnswer = userRawAnswer.toLowerCase();
-  if (userAnswer === correctAnswers[i]){
+  if (userAnswer === correctAnswers[i] || userAnswer === correctAnswers[i].charAt(0)){
     alert(youRight);
     correct++;
   } else {
