@@ -14,60 +14,9 @@ var youWrong = 'That\'s Wrong! And you call yourself my friend. Shame on you!';
 var correct = 0;
 var wrong = 0;
 
-//looping thru the question asking for user input
-var i = 0;
-while(i < userQuestion.length) {
-  var userRawAnswer = prompt(userQuestion[i]);
-  var userAnswer = userRawAnswer.toLowerCase();
-  if (userAnswer === correctAnswers[i] || userAnswer === correctAnswers[i].charAt(0)){
-    alert(youRight);
-    correct++;
-  } else {
-    alert(youWrong);
-    wrong++;
-  }
-  console.log('Your answer to ' + userQuestion[i] + ' is ' + userRawAnswer + '.');
-  i++;
-}
-
-//asking for favorite number
-var userGuess = '';
-var limit = 3;
-var numGuesses = 0;
-//keeps asking the question until 3 is entered or
-while (userGuess !== '3' && numGuesses < limit) {
-  userGuess = prompt('What is my favorite number? Hint: The answer is 1 - 20.');
-  if(userGuess > '3') {
-    alert('Your too high.');
-  } else if(userGuess < '3') {
-    alert('You too low.');
-  } else {
-    alert(youRight);
-    correct++;
-  }
-  numGuesses++;
-}
-
-var userGuesses = 0;
-var guessState = '';
-var isGuessRight = false;
-var livedStates = ['georgia','new york', 'texas', 'new jersey'];
-
-//finds the userguess inside my answers array
-while(userGuesses < 7 && isGuessRight === false){
-  guessState = prompt('Can you guess a state that I have lived in besides Washington?');
-  if(livedStates.includes(String(guessState).toLowerCase()) === true){
-    isGuessRight = true;
-    alert(youRight);
-    correct++;
-  } else if(guessState === ''){
-    alert('Please enter a state.');
-  }
-  userGuesses++;
-}
-alert('The correct answers are ' + livedStates);
-wrong++;
-
+firstFiveQuestions();
+myFavNumber();
+myFavstates();
 
 //display in the console how many I got right
 console.log('You got ' + correct + ' correct.');
@@ -82,4 +31,64 @@ if (score >= 60) {
   document.getElementById('final').innerHTML = 'Your score is ' + score + '.  You do know me I see.';
 } else {
   document.getElementById('final').innerHTML = 'Your Score is ' + score + '. Who are you? Because you clearly don\'t know me';
+}
+
+//my first five Y/N questions
+function firstFiveQuestions(){
+  var i = 0;
+  while(i < userQuestion.length) {
+    var userRawAnswer = prompt(userQuestion[i]);
+    var userAnswer = userRawAnswer.toLowerCase();
+    if (userAnswer === correctAnswers[i] || userAnswer === correctAnswers[i].charAt(0)){
+      alert(youRight);
+      correct++;
+    } else {
+      alert(youWrong);
+      wrong++;
+    }
+    console.log('Your answer to ' + userQuestion[i] + ' is ' + userRawAnswer + '.');
+    i++;
+  }
+}
+//guess my favourite number question
+function myFavNumber(){
+  var userGuess = '';
+  var limit = 3;
+  var numGuesses = 0;
+  //keeps asking the question until 3 is entered or
+  while (userGuess !== '3' && numGuesses < limit) {
+    userGuess = prompt('What is my favorite number? Hint: The answer is 1 - 20.');
+    if(userGuess > '3') {
+      alert('Your too high.');
+    } else if(userGuess < '3') {
+      alert('You too low.');
+    } else {
+      alert(youRight);
+      correct++;
+    }
+    numGuesses++;
+  }
+
+}
+//guess what states I lived in question
+function myFavstates(){
+  var userGuesses = 0;
+  var guessState = '';
+  var isGuessRight = false;
+  var livedStates = ['georgia','new york', 'texas', 'new jersey'];
+
+  //finds the userguess inside my answers array
+  while(userGuesses < 7 && isGuessRight === false){
+    guessState = prompt('Can you guess a state that I have lived in besides Washington?');
+    if(livedStates.includes(String(guessState).toLowerCase()) === true){
+      isGuessRight = true;
+      alert(youRight);
+      correct++;
+    } else if(guessState === ''){
+      alert('Please enter a state.');
+    }
+    userGuesses++;
+  }
+  alert('The correct answers are ' + livedStates);
+  wrong++;
 }
