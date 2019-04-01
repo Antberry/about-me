@@ -1,35 +1,51 @@
 #container {
-  background-color: bisque;
+  background-color: rgb(17, 15, 102);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding-left: 10px;
+  background-image: url(../img/augusta.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
   
 }
 #pageHead {
-  font-size: 2em;
-  text-align: center;
-  color: crimson;
+  font-size: 4em;
+  color: rgb(202, 158, 36);
+  height: 100px
 }
 
-h1 {
-  color: darkblue;
+h1, h2{
+  color: rgb(0, 0, 0);
 }
 
-h2 {
-  color: black;
-}
+
 
 #quiz{
   width: 400px;
-  height: 450px;
-  box-shadow: 10px 10px 10px grey;
+  height: 425px;
+  margin-left: 375px;
+  box-shadow: 10px 5px 5px #ddd095;
   border: 1px, solid, black;
-  background-color: darkslategray;
+  background-color: rgb(202, 158, 36);
   padding-left: 10px;
   color: whitesmoke;
   margin-bottom: 10px;
+  border-style: double;
+  text-align: center;
+  font-size: .7em;
+}
+p {
+  color: whitesmoke;
+  font-size: 1.2em
 }
 
 footer{
   text-align: center;
+  color: rgb(202, 158, 36);
 
+}
+
+ol{
+  color: whitesmoke;
+  font-size: 1.5em;
 }
